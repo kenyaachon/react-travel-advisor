@@ -13,25 +13,27 @@ import { useScrollTrigger } from "@mui/material";
 
 export default function PlacesList(props) {
   return (
-    <Container>
-      <Box SX={{ my: 2 }}>
-        <List
-          sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
-        >
-          <ListItem>
-            <Cards />
-          </ListItem>
-          <ListItem>
-            <Cards />
-          </ListItem>
-          <ListItem>
-            <Cards />
-          </ListItem>
-          <ListItem>
-            <Cards />
-          </ListItem>
-        </List>
-      </Box>
-    </Container>
+    <List
+      sx={{
+        width: "100%",
+        maxWidth: 660,
+        bgcolor: "background.paper",
+        maxHeight: "50%",
+        overflow: "auto",
+      }}
+    >
+      <ListItem>
+        <Cards />
+      </ListItem>
+      <ListItem>
+        <Cards />
+      </ListItem>
+      <ListItem>
+        <Cards />
+      </ListItem>
+      <ListItem>
+        <Cards />
+      </ListItem>
+    </List>
   );
 }
