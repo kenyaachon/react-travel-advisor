@@ -8,22 +8,30 @@ import ImageIcon from "@mui/icons-material/Image";
 import WorkIcon from "@mui/icons-material/Work";
 import BeachAccessIcon from "@mui/icons-material/BeachAccess";
 import Cards from "./Cards";
+import { Container, Box, Typography } from "@mui/material";
+import { useScrollTrigger } from "@mui/material";
 
-export default function PlacesList() {
+export default function PlacesList(props) {
   return (
-    <List sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
-      <ListItem>
-        <Cards />
-      </ListItem>
-      <ListItem>
-        <Cards />
-      </ListItem>
-      <ListItem>
-        <Cards />
-      </ListItem>
-      <ListItem>
-        <Cards />
-      </ListItem>
-    </List>
+    <Container>
+      <Box SX={{ my: 2 }}>
+        <List
+          sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
+        >
+          <ListItem>
+            <Cards />
+          </ListItem>
+          <ListItem>
+            <Cards />
+          </ListItem>
+          <ListItem>
+            <Cards />
+          </ListItem>
+          <ListItem>
+            <Cards />
+          </ListItem>
+        </List>
+      </Box>
+    </Container>
   );
 }

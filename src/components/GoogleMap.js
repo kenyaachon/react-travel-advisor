@@ -5,7 +5,7 @@ import Container from "@mui/material/Container";
 const GoogleMap = () => {
   return (
     <React.Fragment>
-      <Container maxWidth="sm">
+      <Container maxWidth="md">
         <Box sx={{ bgcolor: "#cfe8fc", height: "100vh" }} />
       </Container>
     </React.Fragment>
