@@ -45,14 +45,14 @@ export default function Cards() {
   const address = "New York City 9800032-5224";
   const phoneNumber = "425-254-4392";
   return (
-    <Card sx={{ maxWidth: 500 }}>
+    <Card sx={{ maxWidth: 500, width: "100%" }}>
       <CardMedia
         component="img"
         height="220"
         image="https://i.pinimg.com/474x/8b/20/de/8b20de05b8785d1ccd4a47559076cced.jpg"
         alt="Paella dish"
       />
-      <CardContent>
+      <CardContent sx={{ width: "100%" }}>
         <Typography variant="h5" color="text.secondary">
           375 Chicken 'n Fries
         </Typography>
@@ -69,12 +69,12 @@ export default function Cards() {
             {reviews} reviews
           </Typography>
         </Box>
-        {/* <Box sx={{ width: 200, display: "flex" }}>
+        <Box sx={{ width: "100%", display: "flex" }}>
           <Typography align="left" variant="body2" color="text.secondary">
             Ranking
           </Typography>
 
-          <Box sx={{ flexGrow: 1 }} />
+          <Box sx={{ flexGrow: 1, height: "50px" }} />
 
           <Typography align="left" variant="body2" color="text.secondary">
             #{currentRanking} of {totalRestaurants} in {city}
@@ -82,7 +82,7 @@ export default function Cards() {
         </Box>
         <Box sx={{ flexGrow: 1 }} />
 
-        <Box sx={{ width: 300, display: "flex" }}>
+        <Box sx={{ width: "100%", display: "flex" }}>
           <LocationOnIcon color="disabled" />
           <Box sx={{ flexGrow: 1 }} />
           <Typography align="left" variant="body2" color="text.secondary">
@@ -90,14 +90,13 @@ export default function Cards() {
           </Typography>
         </Box>
 
-        <Box sx={{ width: 200, display: "flex" }}>
+        <Box sx={{ width: "100%", display: "flex" }}>
           <LocalPhoneIcon color="disabled" />
           <Box sx={{ flexGrow: 1 }} />
           <Typography align="left" variant="body2" color="text.secondary">
             {phoneNumber}
           </Typography>
         </Box>
-       */}
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
