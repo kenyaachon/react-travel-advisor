@@ -30,20 +30,27 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function Cards() {
+export default function Cards({
+  reviews,
+  totalRestaurants,
+  currentRanking,
+  city,
+  address,
+  phoneNumber,
+}) {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
 
-  const reviews = 9;
-  const totalRestaurants = 10000;
-  const currentRanking = 5000;
-  const city = "New York City";
+  // const reviews = 9;
+  // const totalRestaurants = 10000;
+  // const currentRanking = 5000;
+  // const city = "New York City";
 
-  const address = "New York City 9800032-5224";
-  const phoneNumber = "425-254-4392";
+  // const address = "New York City 9800032-5224";
+  // const phoneNumber = "425-254-4392";
   return (
     <Card sx={{ maxWidth: 500, width: "100%" }}>
       <CardMedia
