@@ -118,8 +118,8 @@ export default function PlacesList(props) {
           overflow: "auto",
         }}
       >
-        {data.map((card) => (
-          <ListItem>
+        {data.map((card, i) => (
+          <ListItem key={i}>
             <Cards
               reviews={card.reviews}
               totalRestaurants={card.totalRestaurants}
