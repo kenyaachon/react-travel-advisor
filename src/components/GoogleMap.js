@@ -97,10 +97,11 @@ const SimpleMap = () => {
 
   return (
     <div style={{ height: "100vh", width: "100%" }}>
-      <Wrapper
+      {/* <Wrapper
         apiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}
         render={render}
-      >
+      > */}
+      <Wrapper apiKey={""} render={render}>
         <MyMapComponent
           center={center}
           zoom={zoom}
