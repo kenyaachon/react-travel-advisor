@@ -56,7 +56,13 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function PrimarySearchAppBar() {
+function sleep(delay) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, delay);
+  });
+}
+
+export default function PrimarySearchAppBar({ setSearchQuery }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -78,6 +84,15 @@ export default function PrimarySearchAppBar() {
 
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
+  };
+
+  const handleSearchInput = (event) => {
+    //slow down the rate of request being sent to the api
+    //wait until the user is done typing to send the API request
+    (async () => {
+      await sleep(2e3); //slow down request rate
+      setSearchQuery(event.target.value);
+    })();
   };
 
   const menuId = "primary-search-account-menu";
@@ -193,6 +208,7 @@ export default function PrimarySearchAppBar() {
             <StyledInputBase
               placeholder="Search…"
               inputProps={{ "aria-label": "search" }}
+              onChange={handleSearchInput}
             />
           </Search>
         </Toolbar>
