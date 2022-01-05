@@ -10,6 +10,7 @@ import {
   getRestaurants,
 } from "./api/TravelAdvisorAPI";
 import { useState, useEffect } from "react";
+
 function App() {
   const [searchQuery, setSearchQuery] = useState("new york city");
 
@@ -18,38 +19,78 @@ function App() {
   const [type, setType] = useState("hotels");
   //since the hotel and restaurants route require a longitude and latitude
   //we will first call the locations route then get the longitude and latitude from it
-  const coordinates = {
-    latitude: 12.248278039408776,
-    longitude: 109.1981618106365,
-  };
-  useEffect(() => {
-    getLocations(searchQuery).then((response) => {
-      console.log(response);
-      if (response.status < 399) {
-        console.log(response.data);
-        //set the coordinates from the result
-      } else {
-        console.log(response.status);
-        console.log("check the query data");
-      }
 
-      // if (type === "hotels") {
-      //   getHotels(coordinates).then((response) => {
-      //     //set the places data for hotels
-      //   });
-      // } else {
-      //   getHotels(coordinates).then((response) => {
-      //     //set the places data for restaurants
-      //   });
-      // }
-    });
-  });
+  useEffect(() => {
+    const handlePlaces = (coordinates) => {
+      //handle which API method to call depending on the place type
+      console.log(coordinates.latitude, coordinates.longitude);
+      if (type === "hotels") {
+        console.log(type);
+        getHotels(coordinates)
+          .then((response) => {
+            //set the places data for hotels
+            if (response.status < 399) {
+              console.log("data is working");
+              console.log(
+                response.data.data.AppPresentation_queryAppListV2[0].sections
+              );
+            } else {
+              console.log("error with query");
+            }
+          })
+          .catch((error) => console.log(error));
+      } else if (type === "restaurants") {
+        console.log(type);
+        getRestaurants(coordinates)
+          .then((response) => {
+            //set the place data for restaurants
+            if (response.status < 399) {
+              console.log("data is working");
+              console.log(
+                response.data.data.AppPresentation_queryAppListV2[0].sections
+              );
+            } else {
+              console.log("error with query");
+            }
+          })
+          .catch((error) => console.log(error));
+      } else {
+        console.log(type);
+        // getAttractions(coordinates).then((response) => {
+        //   //set the places data for restaurants
+        // });
+      }
+    };
+    getLocations(searchQuery)
+      .then((response) => {
+        if (response.status < 399) {
+          console.log(
+            response.data.data.Typeahead_autocomplete.results[0].detailsV2
+              .geocode
+          );
+          //set the coordinates from the result
+          let longitude =
+            response.data.data.Typeahead_autocomplete.results[0].detailsV2
+              .geocode.longitude;
+
+          let latitude =
+            response.data.data.Typeahead_autocomplete.results[0].detailsV2
+              .geocode.latitude;
+
+          handlePlaces({ longitude: longitude, latitude: latitude });
+        } else {
+          console.log(response.status);
+          console.log("check the query data");
+        }
+      })
+      .catch((error) => console.log(error));
+  }, [searchQuery, type]);
 
   return (
     <>
       <CssBaseline />
       <PrimarySearchAppBar setSearchQuery={setSearchQuery} />
-      <MainContent map={map} places={places} setType={setType} />
+      <MainContent map={map} places={places} setType={setType} type={type} />
     </>
   );
 }

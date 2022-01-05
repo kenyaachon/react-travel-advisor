@@ -37,6 +37,7 @@ export default function Cards({
   city,
   address,
   phoneNumber,
+  image,
 }) {
   const [expanded, setExpanded] = React.useState(false);
 
@@ -44,19 +45,23 @@ export default function Cards({
     setExpanded(!expanded);
   };
 
-  // const reviews = 9;
+  // const review = 9;
   // const totalRestaurants = 10000;
   // const currentRanking = 5000;
   // const city = "New York City";
 
   // const address = "New York City 9800032-5224";
   // const phoneNumber = "425-254-4392";
+
+  let imageURL = image.replace(/({width})/g, 300);
+  imageURL = imageURL.replace(/({height})/g, 300);
   return (
     <Card sx={{ maxWidth: 500, width: "100%" }}>
       <CardMedia
         component="img"
-        height="220"
-        image="https://i.pinimg.com/474x/8b/20/de/8b20de05b8785d1ccd4a47559076cced.jpg"
+        height="300"
+        width="500"
+        image={imageURL}
         alt="Paella dish"
       />
       <CardContent sx={{ width: "100%" }}>

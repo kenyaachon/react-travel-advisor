@@ -12,8 +12,7 @@ export const getLocations = async (query) => {
       },
     };
 
-    const response = await axios.request(options);
-    return response;
+    return await axios.request(options);
   } catch (error) {
     console.log(error);
   }

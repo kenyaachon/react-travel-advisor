@@ -1,0 +1,441 @@
+{
+  "data": {
+    "Typeahead_autocomplete": {
+      "__typename": "Typeahead_Response",
+      "resultsId": "2e8a8bcf-f94a-42c7-bef4-74e05c94cc1c_a60b9962-91f6-442f-a3d8-18be41370bb0",
+      "results": [
+        {
+          "__typename": "Typeahead_LocationItem",
+          "documentId": "60763",
+          "detailsV2": {
+            "__typename": "LocationSelection_LocationInformationV2",
+            "locationId": 60763,
+            "isGeo": true,
+            "placeType": "CITY",
+            "names": {
+              "__typename": "LocationSelection_LocationNames",
+              "name": "New York City",
+              "longOnlyHierarchyTypeaheadV2": "New York, United States"
+            },
+            "geocode": {
+              "__typename": "LocationSelection_LocationInformationV2Geocode",
+              "latitude": 40.713238,
+              "longitude": -74.00584
+            },
+            "contact": {
+              "__typename": "LocationSelection_LocationInformationV2Contact",
+              "streetAddress": {
+                "__typename": "LocationSelection_Address",
+                "street1": null
+              }
+            },
+            "route": {
+              "__typename": "Routing_Route",
+              "fragment": null,
+              "page": "Tourism",
+              "url": "/Tourism-g60763-New_York_City_New_York-Vacations.html",
+              "nonCanonicalUrl": "/Tourism-g60763-New_York_City_New_York-Vacations.html",
+              "typedParams": {
+                "__typename": "Routing_TourismParameters",
+                "geoId": 60763
+              }
+            }
+          },
+          "details": {
+            "__typename": "LocationInformation",
+            "socialStatistics": {
+              "__typename": "SocialStatistics",
+              "isSaved": false
+            }
+          },
+          "image": {
+            "__typename": "PrimaryMedia_PrimaryMedia",
+            "photo": {
+              "__typename": "Photo",
+              "photoSizeDynamic": {
+                "__typename": "PhotoSizeDynamic",
+                "maxHeight": 2068,
+                "maxWidth": 2520,
+                "urlTemplate": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/c5/7c/68/caption.jpg?w={width}&h={height}&s=1&cx=950&cy=1766&chk=v1_9ee2771da71f55a7ac6a"
+              },
+              "photoSizes": [
+                {
+                  "__typename": "PhotoSize",
+                  "height": 0,
+                  "width": 0,
+                  "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/c5/7c/68/caption.jpg?w=100&h=100&s=1&cx=950&cy=1766&chk=v1_9ee2771da71f55a7ac6a"
+                },
+                {
+                  "__typename": "PhotoSize",
+                  "height": 50,
+                  "width": 50,
+                  "url": "https://media-cdn.tripadvisor.com/media/photo-t/1c/c5/7c/68/caption.jpg"
+                },
+                {
+                  "__typename": "PhotoSize",
+                  "height": 150,
+                  "width": 150,
+                  "url": "https://media-cdn.tripadvisor.com/media/photo-l/1c/c5/7c/68/caption.jpg"
+                },
+                {
+                  "__typename": "PhotoSize",
+                  "height": 200,
+                  "width": 180,
+                  "url": "https://media-cdn.tripadvisor.com/media/photo-i/1c/c5/7c/68/caption.jpg"
+                },
+                {
+                  "__typename": "PhotoSize",
+                  "height": 205,
+                  "width": 250,
+                  "url": "https://media-cdn.tripadvisor.com/media/photo-f/1c/c5/7c/68/caption.jpg"
+                },
+                {
+                  "__typename": "PhotoSize",
+                  "height": 450,
+                  "width": 548,
+                  "url": "https://media-cdn.tripadvisor.com/media/photo-s/1c/c5/7c/68/caption.jpg"
+                },
+                {
+                  "__typename": "PhotoSize",
+                  "height": 840,
+                  "width": 1024,
+                  "url": "https://media-cdn.tripadvisor.com/media/photo-w/1c/c5/7c/68/caption.jpg"
+                },
+                {
+                  "__typename": "PhotoSize",
+                  "height": 1050,
+                  "width": 1280,
+                  "url": "https://media-cdn.tripadvisor.com/media/photo-m/1280/1c/c5/7c/68/caption.jpg"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "__typename": "Typeahead_LocationItem",
+          "documentId": "11447903",
+          "detailsV2": {
+            "__typename": "LocationSelection_LocationInformationV2",
+            "locationId": 11447903,
+            "isGeo": false,
+            "placeType": "ACTIVITY",
+            "names": {
+              "__typename": "LocationSelection_LocationNames",
+              "name": "New York City Harbor Lights Cruise",
+              "longOnlyHierarchyTypeaheadV2": "New York City, New York"
+            },
+            "geocode": null,
+            "contact": {
+              "__typename": "LocationSelection_LocationInformationV2Contact",
+              "streetAddress": {
+                "__typename": "LocationSelection_Address",
+                "street1": null
+              }
+            },
+            "route": null
+          },
+          "details": {
+            "__typename": "LocationInformation",
+            "socialStatistics": {
+              "__typename": "SocialStatistics",
+              "isSaved": false
+            }
+          },
+          "image": {
+            "__typename": "PrimaryMedia_PrimaryMedia",
+            "photo": {
+              "__typename": "Photo",
+              "photoSizeDynamic": {
+                "__typename": "PhotoSizeDynamic",
+                "maxHeight": 480,
+                "maxWidth": 720,
+                "urlTemplate": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/74/51/0d/caption.jpg?w={width}&h={height}&s=1"
+              },
+              "photoSizes": [
+                {
+                  "__typename": "PhotoSize",
+                  "height": 0,
+                  "width": 0,
+                  "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/74/51/0d/caption.jpg?w=100&h=100&s=1"
+                },
+                {
+                  "__typename": "PhotoSize",
+                  "height": 50,
+                  "width": 50,
+                  "url": "https://media-cdn.tripadvisor.com/media/photo-t/1a/74/51/0d/caption.jpg"
+                },
+                {
+                  "__typename": "PhotoSize",
+                  "height": 150,
+                  "width": 150,
+                  "url": "https://media-cdn.tripadvisor.com/media/photo-l/1a/74/51/0d/caption.jpg"
+                },
+                {
+                  "__typename": "PhotoSize",
+                  "height": 200,
+                  "width": 180,
+                  "url": "https://media-cdn.tripadvisor.com/media/photo-i/1a/74/51/0d/caption.jpg"
+                },
+                {
+                  "__typename": "PhotoSize",
+                  "height": 167,
+                  "width": 250,
+                  "url": "https://media-cdn.tripadvisor.com/media/photo-f/1a/74/51/0d/caption.jpg"
+                },
+                {
+                  "__typename": "PhotoSize",
+                  "height": 367,
+                  "width": 550,
+                  "url": "https://media-cdn.tripadvisor.com/media/photo-s/1a/74/51/0d/caption.jpg"
+                },
+                {
+                  "__typename": "PhotoSize",
+                  "height": 480,
+                  "width": 720,
+                  "url": "https://media-cdn.tripadvisor.com/media/photo-o/1a/74/51/0d/caption.jpg"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "__typename": "Typeahead_LocationItem",
+          "documentId": "8130064",
+          "detailsV2": {
+            "__typename": "LocationSelection_LocationInformationV2",
+            "locationId": 8130064,
+            "isGeo": false,
+            "placeType": "ATTRACTION",
+            "names": {
+              "__typename": "LocationSelection_LocationNames",
+              "name": "New York City Subway",
+              "longOnlyHierarchyTypeaheadV2": "New York City, New York"
+            },
+            "geocode": {
+              "__typename": "LocationSelection_LocationInformationV2Geocode",
+              "latitude": 40.69062,
+              "longitude": -73.98882
+            },
+            "contact": {
+              "__typename": "LocationSelection_LocationInformationV2Contact",
+              "streetAddress": {
+                "__typename": "LocationSelection_Address",
+                "street1": "130 Livingston Street, Brooklyn"
+              }
+            },
+            "route": null
+          },
+          "details": {
+            "__typename": "LocationInformation",
+            "socialStatistics": {
+              "__typename": "SocialStatistics",
+              "isSaved": false
+            }
+          },
+          "image": {
+            "__typename": "PrimaryMedia_PrimaryMedia",
+            "photo": {
+              "__typename": "Photo",
+              "photoSizeDynamic": {
+                "__typename": "PhotoSizeDynamic",
+                "maxHeight": 3024,
+                "maxWidth": 4032,
+                "urlTemplate": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/30/30/0a/passing-by-citi-field.jpg?w={width}&h={height}&s=1"
+              },
+              "photoSizes": [
+                {
+                  "__typename": "PhotoSize",
+                  "height": 0,
+                  "width": 0,
+                  "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/30/30/0a/passing-by-citi-field.jpg?w=100&h=100&s=1"
+                },
+                {
+                  "__typename": "PhotoSize",
+                  "height": 50,
+                  "width": 50,
+                  "url": "https://media-cdn.tripadvisor.com/media/photo-t/15/30/30/0a/passing-by-citi-field.jpg"
+                },
+                {
+                  "__typename": "PhotoSize",
+                  "height": 150,
+                  "width": 150,
+                  "url": "https://media-cdn.tripadvisor.com/media/photo-l/15/30/30/0a/passing-by-citi-field.jpg"
+                },
+                {
+                  "__typename": "PhotoSize",
+                  "height": 200,
+                  "width": 180,
+                  "url": "https://media-cdn.tripadvisor.com/media/photo-i/15/30/30/0a/passing-by-citi-field.jpg"
+                },
+                {
+                  "__typename": "PhotoSize",
+                  "height": 188,
+                  "width": 250,
+                  "url": "https://media-cdn.tripadvisor.com/media/photo-f/15/30/30/0a/passing-by-citi-field.jpg"
+                },
+                {
+                  "__typename": "PhotoSize",
+                  "height": 412,
+                  "width": 550,
+                  "url": "https://media-cdn.tripadvisor.com/media/photo-s/15/30/30/0a/passing-by-citi-field.jpg"
+                },
+                {
+                  "__typename": "PhotoSize",
+                  "height": 768,
+                  "width": 1024,
+                  "url": "https://media-cdn.tripadvisor.com/media/photo-w/15/30/30/0a/passing-by-citi-field.jpg"
+                },
+                {
+                  "__typename": "PhotoSize",
+                  "height": 960,
+                  "width": 1280,
+                  "url": "https://media-cdn.tripadvisor.com/media/photo-m/1280/15/30/30/0a/passing-by-citi-field.jpg"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "__typename": "Typeahead_QuerySuggestionItem",
+          "documentId": "29641173f0f1ab017fe3d71eb37a9c210",
+          "suggestionType": "template",
+          "buCategory": "HOTELS",
+          "text": "new york city hotels",
+          "parentGeoDetails": {
+            "__typename": "LocationSelection_LocationInformationV2",
+            "names": {
+              "__typename": "LocationSelection_LocationNames",
+              "longOnlyHierarchyTypeaheadV2": "New York, United States"
+            }
+          },
+          "route": {
+            "__typename": "Routing_Route",
+            "fragment": null,
+            "page": "HotelsFusion",
+            "url": "/Hotels-g60763-New_York_City_New_York-Hotels.html",
+            "nonCanonicalUrl": "/Hotels-g60763-New_York_City_New_York-Hotels.html?contentType=hotel&webVariant=HotelsFusion",
+            "typedParams": {
+              "__typename": "Routing_HotelsFusionParameters"
+            }
+          },
+          "scopeType": "GEO"
+        },
+        {
+          "__typename": "Typeahead_QuerySuggestionItem",
+          "documentId": "27ad83e90ec14b4b6f2ad17b27df0cc10",
+          "suggestionType": "template",
+          "buCategory": "HOTELS",
+          "text": "new york city new york hotel deals",
+          "parentGeoDetails": {
+            "__typename": "LocationSelection_LocationInformationV2",
+            "names": {
+              "__typename": "LocationSelection_LocationNames",
+              "longOnlyHierarchyTypeaheadV2": "New York, United States"
+            }
+          },
+          "route": {
+            "__typename": "Routing_Route",
+            "fragment": null,
+            "page": "SmartDeals",
+            "url": "/SmartDeals-g60763-New_York_City_New_York-Hotel-Deals.html",
+            "nonCanonicalUrl": "/SmartDeals-g60763-New_York_City_New_York-Hotel-Deals.html",
+            "typedParams": {
+              "__typename": "Routing_SmartDealsParameters"
+            }
+          },
+          "scopeType": "GEO"
+        },
+        {
+          "__typename": "Typeahead_QuerySuggestionItem",
+          "documentId": "4d38e4911efed7633e868ac56e6bacc70",
+          "suggestionType": "template",
+          "buCategory": "ATTRACTIONS",
+          "text": "new york city tours and tickets",
+          "parentGeoDetails": {
+            "__typename": "LocationSelection_LocationInformationV2",
+            "names": {
+              "__typename": "LocationSelection_LocationNames",
+              "longOnlyHierarchyTypeaheadV2": "New York, United States"
+            }
+          },
+          "route": {
+            "__typename": "Routing_Route",
+            "fragment": null,
+            "page": "AttractionProductsFusion",
+            "url": "/Attraction_Products-g60763-New_York_City_New_York.html",
+            "nonCanonicalUrl": "/Attraction_Products-g60763-New_York_City_New_York.html?contentType=attraction_product&webVariant=AttractionProductsFusion",
+            "typedParams": {
+              "__typename": "Routing_AttractionProductsFusionParameters"
+            }
+          },
+          "scopeType": "GEO"
+        },
+        {
+          "__typename": "Typeahead_QuerySuggestionItem",
+          "documentId": "0c74ab2c0ab1fda0b380401a8b0378d20",
+          "suggestionType": "query",
+          "buCategory": "SEARCH",
+          "text": "new york city",
+          "parentGeoDetails": null,
+          "route": null,
+          "scopeType": null
+        },
+        {
+          "__typename": "Typeahead_QuerySuggestionItem",
+          "documentId": "ea613320d33573195ce724ab7e818c260",
+          "suggestionType": "template",
+          "buCategory": "ATTRACTIONS",
+          "text": "new york city tours",
+          "parentGeoDetails": {
+            "__typename": "LocationSelection_LocationInformationV2",
+            "names": {
+              "__typename": "LocationSelection_LocationNames",
+              "longOnlyHierarchyTypeaheadV2": "New York, United States"
+            }
+          },
+          "route": {
+            "__typename": "Routing_Route",
+            "fragment": null,
+            "page": "AttractionsFusion",
+            "url": "/Attractions-g60763-Activities-c42-New_York_City_New_York.html",
+            "nonCanonicalUrl": "/Attractions-g60763-Activities-c42-New_York_City_New_York.html?contentType=attraction&webVariant=AttractionsFusion",
+            "typedParams": {
+              "__typename": "Routing_AttractionsFusionParameters"
+            }
+          },
+          "scopeType": "GEO"
+        },
+        {
+          "__typename": "Typeahead_QuerySuggestionItem",
+          "documentId": "09e8e0e649cf176c1ad7b7069c5cc9390",
+          "suggestionType": "template",
+          "buCategory": "ATTRACTIONS",
+          "text": "new york city attractions",
+          "parentGeoDetails": {
+            "__typename": "LocationSelection_LocationInformationV2",
+            "names": {
+              "__typename": "LocationSelection_LocationNames",
+              "longOnlyHierarchyTypeaheadV2": "New York, United States"
+            }
+          },
+          "route": {
+            "__typename": "Routing_Route",
+            "fragment": null,
+            "page": "AttractionsFusion",
+            "url": "/Attractions-g60763-Activities-a_allAttractions.true-New_York_City_New_York.html",
+            "nonCanonicalUrl": "/Attractions-g60763-Activities-a_allAttractions.true-New_York_City_New_York.html?contentType=attraction&webVariant=AttractionsFusion",
+            "typedParams": {
+              "__typename": "Routing_AttractionsFusionParameters"
+            }
+          },
+          "scopeType": "GEO"
+        },
+        {
+          "__typename": "Typeahead_RescueResultItem",
+          "documentId": "\"new york city\"",
+          "text": "\"new york city\""
+        }
+      ]
+    }
+  }
+}

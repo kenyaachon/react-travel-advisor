@@ -65,9 +65,8 @@ const data = [
     phoneNumber: "425-254-4392",
   },
 ];
-export default function PlacesList(props) {
+export default function PlacesList({ setType, type }) {
   const [rating, SetRating] = React.useState(4.0);
-  const [type, setType] = React.useState("");
 
   const handleSearch = (event) => {
     SetRating(event.target.value);
@@ -76,6 +75,9 @@ export default function PlacesList(props) {
   const handleTypeChange = (event) => {
     setType(event.target.value);
   };
+
+  let image =
+    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/39/ba/39/getlstd-property-photo.jpg?w={width}&h={height}&s=1";
   return (
     <>
       <div>
@@ -127,6 +129,7 @@ export default function PlacesList(props) {
               city={card.city}
               address={card.address}
               phoneNumber={card.phoneNumber}
+              image={image}
             />
           </ListItem>
         ))}
