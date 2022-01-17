@@ -1,8 +1,6 @@
-import logo from "./logo.svg";
 import "./App.css";
 import PrimarySearchAppBar from "./components/NavBar";
 import MainContent from "./components/MainContent";
-import PlacesList from "./components/PlacesList";
 import { CssBaseline } from "@mui/material";
 import {
   getLocations,
@@ -14,7 +12,7 @@ import { useState, useEffect } from "react";
 function App() {
   const [searchQuery, setSearchQuery] = useState("new york city");
 
-  const [map, setMap] = useState({});
+  const [center, setCenter] = useState({});
   const [places, setPlaces] = useState([]);
   const [type, setType] = useState("hotels");
   //since the hotel and restaurants route require a longitude and latitude
@@ -77,6 +75,10 @@ function App() {
             response.data.data.Typeahead_autocomplete.results[0].detailsV2
               .geocode.latitude;
 
+          setCenter({
+            lat: latitude,
+            lng: longitude,
+          });
           handlePlaces({ longitude: longitude, latitude: latitude });
         } else {
           console.log(response.status);
@@ -90,7 +92,12 @@ function App() {
     <>
       <CssBaseline />
       <PrimarySearchAppBar setSearchQuery={setSearchQuery} />
-      <MainContent map={map} places={places} setType={setType} type={type} />
+      <MainContent
+        center={center}
+        places={places}
+        setType={setType}
+        type={type}
+      />
     </>
   );
 }

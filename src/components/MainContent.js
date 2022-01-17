@@ -4,7 +4,7 @@ import PlacesList from "./PlacesList";
 import GoogleMap from "./GoogleMap";
 import { Container } from "@mui/material";
 
-export default function MainContent({ setType, type }) {
+export default function MainContent({ center, setType, type }) {
   const spacing = 1;
   return (
     <Container maxWidth="xl" sx={{ mt: 4, mb: 1 }}>
@@ -18,7 +18,7 @@ export default function MainContent({ setType, type }) {
           <PlacesList setType={setType} type={type} />
         </Grid>
         <Grid item xs={12} md={8} lg={8}>
-          <GoogleMap />
+          <GoogleMap center={center} />
         </Grid>
       </Grid>
     </Container>

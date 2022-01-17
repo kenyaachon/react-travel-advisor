@@ -90,7 +90,7 @@ export default function PrimarySearchAppBar({ setSearchQuery }) {
     //slow down the rate of request being sent to the api
     //wait until the user is done typing to send the API request
     (async () => {
-      await sleep(2e3); //slow down request rate
+      await sleep(4e3); //slow down request rate
       setSearchQuery(event.target.value);
     })();
   };

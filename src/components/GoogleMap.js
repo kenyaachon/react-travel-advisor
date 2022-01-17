@@ -1,12 +1,9 @@
-import React, { useEffect, useRef, ReactElement } from "react";
-import Box from "@mui/material/Box";
+import React, { useRef } from "react";
 import Container from "@mui/material/Container";
-import GoogleMapReact from "google-map-react";
 import { Wrapper, Status } from "@googlemaps/react-wrapper";
-import googleMapReact from "google-map-react";
 
 const render = (status) => {
-  if (status === Status.LOADING) return <h3>{status}...</h3>;
+  if (status === Status.LOADING) return <h3>props is done loading</h3>;
   if (status === Status.FAILURE) return <h3>{status}...</h3>;
   return null;
 };
@@ -23,21 +20,22 @@ const MyMapComponent = ({
   const [map, setMap] = React.useState();
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const mapOptions = {
-    center,
-    zoom,
-    mapTypeControl: true,
-    mapTypeControlOptions: {
-      style: window.google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-      position: window.google.maps.ControlPosition.TOP_CENTER,
-    },
-  };
+  console.log(typeof center.lat);
 
   React.useEffect(() => {
+    const mapOptions = {
+      center,
+      zoom,
+      mapTypeControl: true,
+      mapTypeControlOptions: {
+        style: window.google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+        position: window.google.maps.ControlPosition.TOP_CENTER,
+      },
+    };
     if (ref.current && !map) {
       setMap(new window.google.maps.Map(ref.current, mapOptions));
     }
-  }, [ref, map, mapOptions]);
+  }, [ref, map, center, zoom]);
 
   // [END maps_react_map_component_options_hook]
   // [START maps_react_map_component_event_hooks]
@@ -85,8 +83,7 @@ const Marker = (options) => {
   return null;
 };
 
-const SimpleMap = () => {
-  const center = { lat: 48.864716, lng: 2.349014 };
+const SimpleMap = ({ center = { lat: 48.864716, lng: 2.349014 } }) => {
   const zoom = 11;
   const [clicks, setClicks] = React.useState([]);
   //When the map is clicked
@@ -117,11 +114,12 @@ const SimpleMap = () => {
   );
 };
 
-const GoogleMap = () => {
+const GoogleMap = ({ center }) => {
+  console.log(center);
   return (
     <Container maxWidth="lg">
       {/* <Box sx={{ bgcolor: "#cfe8fc", height: "100vh" }} /> */}
-      <SimpleMap />
+      <SimpleMap center={center} />
     </Container>
   );
 };
