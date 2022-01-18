@@ -44,8 +44,15 @@ const MyMapComponent = ({
       if (onClick) {
         map.addListener("click", onClick);
       }
+
+      if (center) {
+        console.log("changing the center of the map");
+        console.log(map.getCenter());
+        //change the map after the user has enter their choice
+        map.setCenter(center);
+      }
     }
-  }, [onClick, map]);
+  }, [onClick, map, center, zoom]);
   return (
     <>
       <div ref={ref} id="map" style={style} />{" "}
@@ -85,6 +92,7 @@ const Marker = (options) => {
 
 const SimpleMap = ({ center = { lat: 48.864716, lng: 2.349014 } }) => {
   const zoom = 11;
+
   const [clicks, setClicks] = React.useState([]);
   //When the map is clicked
   const onClick = (event) => {
