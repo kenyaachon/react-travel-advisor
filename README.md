@@ -10,9 +10,4 @@ The travel advisor API was used to find the list of restraunts or hotels in the 
 searched for. 
 
 
-
-https://mui.com/components/autocomplete/#disabled-options
-
-https://rapidapi.com/apidojo/api/travel-advisor/
-https://developers.google.com/maps/documentation/geocoding/overview
-https://developers.google.com/maps/documentation/javascript/react-map
+![Travel Advisor](https://github.com/kenyaachon/react-travel-advisor/blob/main/images/frontend.png "Travel Advisor")
