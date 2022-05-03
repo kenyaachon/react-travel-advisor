@@ -32,6 +32,9 @@ function App() {
               console.log(
                 response.data.data.AppPresentation_queryAppListV2[0].sections
               );
+              setPlaces(
+                response.data.data.AppPresentation_queryAppListV2[0].sections
+              );
             } else {
               console.log("error with query");
             }
@@ -45,6 +48,9 @@ function App() {
             if (response.status < 399) {
               console.log("data is working");
               console.log(
+                response.data.data.AppPresentation_queryAppListV2[0].sections
+              );
+              setPlaces(
                 response.data.data.AppPresentation_queryAppListV2[0].sections
               );
             } else {
@@ -97,6 +103,7 @@ function App() {
         places={places}
         setType={setType}
         type={type}
+        city={searchQuery}
       />
     </>
   );

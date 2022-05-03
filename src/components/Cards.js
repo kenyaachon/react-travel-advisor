@@ -35,9 +35,9 @@ export default function Cards({
   totalRestaurants,
   currentRanking,
   city,
-  address,
-  phoneNumber,
   image,
+  title,
+  rating,
 }) {
   const [expanded, setExpanded] = React.useState(false);
 
@@ -50,8 +50,8 @@ export default function Cards({
   // const currentRanking = 5000;
   // const city = "New York City";
 
-  // const address = "New York City 9800032-5224";
-  // const phoneNumber = "425-254-4392";
+  const address = "New York City 9800032-5224";
+  const phoneNumber = "425-254-4392";
 
   let imageURL = image.replace(/({width})/g, 300);
   imageURL = imageURL.replace(/({height})/g, 300);
@@ -66,13 +66,14 @@ export default function Cards({
       />
       <CardContent sx={{ width: "100%" }}>
         <Typography variant="h5" color="text.secondary">
-          375 Chicken 'n Fries
+          {title}
         </Typography>
         <Box sx={{ width: "100%", display: "flex" }}>
           <Rating
             name="half-rating-read"
             defaultValue={2.5}
             precision={0.5}
+            value={rating}
             readOnly
           />
           <Box sx={{ flexGrow: 1 }} />
@@ -81,7 +82,7 @@ export default function Cards({
             {reviews} reviews
           </Typography>
         </Box>
-        <Box sx={{ width: "100%", display: "flex" }}>
+        {/* <Box sx={{ width: "100%", display: "flex" }}>
           <Typography align="left" variant="body2" color="text.secondary">
             Ranking
           </Typography>
@@ -91,7 +92,7 @@ export default function Cards({
           <Typography align="left" variant="body2" color="text.secondary">
             #{currentRanking} of {totalRestaurants} in {city}
           </Typography>
-        </Box>
+        </Box> */}
         <Box sx={{ flexGrow: 1 }} />
 
         <Box sx={{ width: "100%", display: "flex" }}>

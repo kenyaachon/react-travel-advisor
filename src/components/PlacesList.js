@@ -1,15 +1,15 @@
 import * as React from "react";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import ListItemAvatar from "@mui/material/ListItemAvatar";
-import Avatar from "@mui/material/Avatar";
-import ImageIcon from "@mui/icons-material/Image";
-import WorkIcon from "@mui/icons-material/Work";
-import BeachAccessIcon from "@mui/icons-material/BeachAccess";
+// import ListItemText from "@mui/material/ListItemText";
+// import ListItemAvatar from "@mui/material/ListItemAvatar";
+// import Avatar from "@mui/material/Avatar";
+// import ImageIcon from "@mui/icons-material/Image";
+// import WorkIcon from "@mui/icons-material/Work";
+// import BeachAccessIcon from "@mui/icons-material/BeachAccess";
 import Cards from "./Cards";
-import { Container, Box, Typography } from "@mui/material";
-import { useScrollTrigger } from "@mui/material";
+// import { Container, Box, Typography } from "@mui/material";
+// import { useScrollTrigger } from "@mui/material";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -65,7 +65,50 @@ const data = [
     phoneNumber: "425-254-4392",
   },
 ];
-export default function PlacesList({ setType, type }) {
+
+const getRating = (place) => {
+  if (place.singleCardContent) {
+    if (place.singleCardContent.bubbleRating) {
+      // how many stars
+      //int
+      console.log(place.singleCardContent.bubbleRating.rating);
+      return place.singleCardContent.bubbleRating.rating;
+    }
+  }
+  return 2;
+};
+
+const getTitle = (place) => {
+  if (place.singleCardContent) {
+    console.log(place.singleCardContent.cardTitle.string);
+    return place.singleCardContent.cardTitle.string;
+  }
+  return "No Name";
+};
+const getNumberReviews = (place) => {
+  if (place.singleCardContent) {
+    if (place.singleCardContent.bubbleRating) {
+      // how many people reviewed the restaurant
+      //string
+      console.log(place.singleCardContent.bubbleRating.numberReviews.string);
+
+      return place.singleCardContent.bubbleRating.numberReviews.string;
+    }
+  }
+  return "0";
+};
+
+const getImage = (place) => {
+  // if (place.singleCardContent) {
+  //   console.log(place.singleCardContent.cardPhotos[0].sizes.urlTemplate);
+  //   return place.singleCardContent.cardPhotos[0].sizes.urlTemplate;
+  // }
+  return "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/39/ba/39/getlstd-property-photo.jpg?w={width}&h={height}&s=1";
+};
+export default function PlacesList({ places, setType, type, city }) {
+  if (places) {
+    console.log("we are ready to start changing the data");
+  }
   const [rating, SetRating] = React.useState(4.0);
 
   const handleSearch = (event) => {
@@ -120,7 +163,7 @@ export default function PlacesList({ setType, type }) {
           overflow: "auto",
         }}
       >
-        {data.map((card, i) => (
+        {/* {data.map((card, i) => (
           <ListItem key={i}>
             <Cards
               reviews={card.reviews}
@@ -130,6 +173,19 @@ export default function PlacesList({ setType, type }) {
               address={card.address}
               phoneNumber={card.phoneNumber}
               image={image}
+            />
+          </ListItem>
+        ))} */}
+
+        {places.map((place, i) => (
+          <ListItem key={i}>
+            <Cards
+              image={getImage(place)}
+              title={getTitle(place)}
+              rating={getRating(place)}
+              city={city}
+              address={"Not Available"}
+              phoneNumber={"Not Available"}
             />
           </ListItem>
         ))}
